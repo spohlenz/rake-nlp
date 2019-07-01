@@ -51,7 +51,7 @@ module RakeNLP
 
       phrases.each do |phrase|
         if @options[:min_frequency] > 1
-          next if phrases.count(keyword) < @options[:min_frequency]
+          next if phrases.count(phrase) < @options[:min_frequency]
         end
 
         words = split_words(phrase)
